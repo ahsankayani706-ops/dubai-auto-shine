@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Dubai Auto Shine — premium mobile car detailing in Dubai">
+<title>Dubai Auto Shine | Premium Car Detailing</title>
+
+<style>
+:root{
+--bg:#070707;
+--card:#111;
+--gold:#d8ad52;
+--text:#f6f2e9;
+--muted:#aaa59b;
+--line:#252525;
+--max:1180px
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font:15px/1.6 Arial,sans-serif
+}
+
+a{color:inherit;text-decoration:none}
+.wrap{width:min(92%,var(--max));margin:auto}
+
+header{
+position:fixed;
+z-index:9;
+top:0;
+width:100%;
+background:#070707dd;
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line)
+}
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.logo{
+font-weight:900;
+letter-spacing:1.5px
+}
+
+.logo i{
+color:var(--gold);
+font-style:normal
+}
+
+nav{
+display:flex;
+gap:25px
+}
+
+nav a{
+color:#ccc;
+font-size:13px
+}
+
+nav a:hover{color:var(--gold)}
+
+.btn{
+display:inline-block;
+padding:13px 20px;
+border-radius:4px;
+font-weight:800;
+font-size:13px
+}
+
+.gold{
+background:var(--gold);
+color:#090909
+}
+
+.outline{
+border:1px solid #8e7036;
+color:var(--gold)
+}
+
+.hero{
+min-height:100vh;
+padding-top:76px;
+display:flex;
+align-items:center;
+background:
+radial-gradient(circle at 80% 45%,#6d531b33,transparent 32%),
+linear-gradient(110deg,#050505 25%,#151515 100%)
+}
+
+.hero-in{max-width:720px}
+
+.eyebrow,.kicker{
+color:var(--gold);
+font-size:11px;
+font-weight:900;
+letter-spacing:3px;
+text-transform:uppercase
+}
+
+.hero h1{
+font-size:clamp(46px,7vw,82px);
+line-height:.98;
+letter-spacing:-3px;
+margin:15px 0 22px
+}
+
+.hero h1 span,h2 span{color:var(--gold)}
+
+.hero p{
+font-size:18px;
+color:#c3bfb7;
+max-width:610px
+}
+
+.actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin:28px 0
+}
+
+.stats{
+display:flex;
+gap:40px;
+margin-top:45px
+}
+
+.stats b{
+font-size:27px;
+display:block
+}
+
+.stats small{color:var(--muted)}
+
+section{padding:100px 0}
+
+.head{
+display:flex;
+justify-content:space-between;
+gap:30px;
+align-items:end;
+margin-bottom:42px
+}
+
+.head h2{
+font-size:clamp(32px,4vw,50px);
+line-height:1;
+margin:8px 0 0
+}
+
+.head p{
+max-width:480px;
+color:var(--muted)
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.card{
+background:linear-gradient(145deg,#151515,#0c0c0c);
+border:1px solid var(--line);
+border-radius:10px;
+padding:28px
+}
+
+.icon{
+font-size:28px;
+color:var(--gold)
+}
+
+.card h3{
+margin:12px 0 7px;
+font-size:20px
+}
+
+.card p,.card li{color:var(--muted)}
+
+.packages{background:#0c0c0c}
+
+.price{
+font-size:29px;
+color:var(--gold);
+font-weight:900;
+margin:15px 0
+}
+
+.card ul{
+padding:0;
+list-style:none
+}
+
+.card li{
+padding:7px 0;
+border-bottom:1px solid var(--line);
+font-size:13px
+}
+
+.card li:before{
+content:'✓';
+color:var(--gold);
+margin-right:8px
+}
+
+.featured{
+border-color:#9a783b;
+transform:translateY(-7px);
+position:relative
+}
+
+.badge{
+position:absolute;
+right:15px;
+top:15px;
+background:var(--gold);
+color:#111;
+font-size:9px;
+font-weight:900;
+padding:4px 7px
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center
+}
+
+.visual{
+height:420px;
+border:1px solid var(--line);
+border-radius:12px;
+background:
+radial-gradient(circle at 70% 30%,#3a3a3a,#0b0b0b 60%);
+display:flex;
+align-items:end;
+padding:30px
+}
+
+.visual strong{
+font-size:70px;
+line-height:.85;
+color:#d8ad52cc
+}
+
+.copy p{color:var(--muted)}
+
+.points{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin:25px 0
+}
+
+.point{
+border:1px solid var(--line);
+padding:15px;
+border-radius:7px;
+color:var(--muted);
+font-size:13px
+}
+
+.point b{
+display:block;
+color:var(--gold);
+margin-bottom:3px
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr;
+grid-template-rows:210px 210px;
+gap:12px
+}
+
+.photo{
+border-radius:9px;
+border:1px solid var(--line);
+padding:20px;
+display:flex;
+align-items:end;
+background:
+linear-gradient(135deg,#5b461b55,transparent 45%),
+linear-gradient(145deg,#292929,#0d0d0d)
+}
+
+.photo:first-child{grid-row:span 2}
+
+.faq{
+max-width:850px;
+margin:auto
+}
+
+.faq article{
+border-bottom:1px solid var(--line);
+padding:19px 0
+}
+
+.faq h3{
+font-size:15px;
+margin:0
+}
+
+.faq p{
+color:var(--muted);
+font-size:14px;
+margin:7px 0 0
+}
+
+.cta{
+border:1px solid #70582e;
+background:linear-gradient(110deg,#171208,#0d0d0d);
+padding:48px;
+border-radius:13px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px
+}
+
+.cta h2{
+font-size:clamp(30px,4vw,47px);
+margin:5px 0
+}
+
+.cta p{color:var(--muted)}
+
+footer{
+border-top:1px solid var(--line);
+padding:30px 0;
+color:#888;
+font-size:12px
+}
+
+.foot{
+display:flex;
+justify-content:space-between
+}
+
+.wa{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+color:#07150b;
+width:56px;
+height:56px;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-weight:900;
+z-index:20
+}
+
+@media(max-width:850px){
+
+nav{display:none}
+
+.grid{
+grid-template-columns:1fr
+}
+
+.featured{transform:none}
+
+.about{
+grid-template-columns:1fr
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-template-rows:180px 180px 180px
+}
+
+.photo:first-child{grid-row:auto}
+
+.cta{display:block}
+
+.cta .btn{margin-top:15px}
+
+}
+
+@media(max-width:520px){
+
+section{padding:75px 0}
+
+.stats{
+gap:18px;
+flex-wrap:wrap
+}
+
+.points{
+grid-template-columns:1fr
+}
+
+.gallery{
+grid-template-columns:1fr
+}
+
+.foot{display:block}
+
+.foot div+div{
+margin-top:8px
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap nav">
+
+<a class="logo" href="#">
+DUBAI <i>AUTO SHINE</i>
+</a>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#packages">Packages</a>
+<a href="#why">Why Us</a>
+<a href="#gallery">Gallery</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn gold" href="#contact">Book Now</a>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="wrap hero-in">
+
+<div class="eyebrow">
+Premium Car Detailing • Dubai
+</div>
+
+<h1>
+Make Your Car<br>
+<span>Shine Like New.</span>
+</h1>
+
+<p>
+Professional detailing, deep cleaning and paint care for drivers who expect their car to look exceptional.
+</p>
+
+<div class="actions">
+
+<a class="btn gold" href="#packages">
+View Packages
+</a>
+
+<a class="btn outline" href="#contact">
+WhatsApp Us
+</a>
+
+</div>
+
+<div class="stats">
+
+<div>
+<b>500+</b>
+<small>Cars detailed</small>
+</div>
+
+<div>
+<b>4.9/5</b>
+<small>Customer rating</small>
+</div>
+
+<div>
+<b>Dubai</b>
+<small>Mobile service</small>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="services">
+
+<div class="wrap">
+
+<div class="head">
+
+<div>
+
+<div class="kicker">Our Services</div>
+
+<h2>
+Detailing done properly.
+</h2>
+
+</div>
+
+<p>
+From a quick refresh to a complete transformation, every service is designed around a clean, premium finish.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✦</div>
+<h3>Exterior Detailing</h3>
+<p>
+Safe wash, decontamination, wheels, tyres and finishing for a deep showroom-style shine.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">◈</div>
+<h3>Interior Deep Clean</h3>
+<p>
+Seats, carpets, dashboard, panels and hard-to-reach areas professionally cleaned.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">◇</div>
+<h3>Paint Enhancement</h3>
+<p>
+Machine polishing and gloss enhancement to restore clarity and improve paint appearance.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">◆</div>
+<h3>Ceramic Protection</h3>
+<p>
+Long-lasting protection with a slick finish that helps keep your vehicle easier to maintain.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">◎</div>
+<h3>Headlight Restoration</h3>
+<p>
+Improve the look of faded headlights with professional cleaning and polishing.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">▣</div>
+<h3>Mobile Detailing</h3>
+<p>
+Convenient detailing at your home, office or preferred Dubai location.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="packages" id="packages">
+
+<div class="wrap">
+
+<div class="head">
+
+<div>
+
+<div class="kicker">Simple Pricing</div>
+
+<h2>
+Choose your shine.
+</h2>
+
+</div>
+
+<p>
+Clear packages for everyday maintenance, deep cleaning and premium protection.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Essential</h3>
+
+<div class="price">AED 149</div>
+
+<ul>
+<li>Exterior hand wash</li>
+<li>Wheel & tyre clean</li>
+<li>Interior vacuum</li>
+<li>Dashboard wipe</li>
+</ul>
+
+<a class="btn outline" href="#contact">
+Book Essential
+</a>
+
+</div>
+
+
+<div class="card featured">
+
+<span class="badge">
+MOST POPULAR
+</span>
+
+<h3>Premium</h3>
+
+<div class="price">AED 299</div>
+
+<ul>
+<li>Everything in Essential</li>
+<li>Interior deep clean</li>
+<li>Leather conditioning</li>
+<li>Paint decontamination</li>
+<li>Premium finish</li>
+</ul>
+
+<a class="btn gold" href="#contact">
+Book Premium
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Ultimate</h3>
+
+<div class="price">AED 499</div>
+
+<ul>
+<li>Everything in Premium</li>
+<li>Paint enhancement</li>
+<li>Engine bay detail</li>
+<li>Headlight polish</li>
+<li>Protection treatment</li>
+</ul>
+
+<a class="btn outline" href="#contact">
+Book Ultimate
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="why">
+
+<div class="wrap about">
+
+<div class="visual">
+<strong>
+01<br>
+SHINE
+</strong>
+</div>
+
+
+<div class="copy">
+
+<div class="kicker">
+Why Dubai Auto Shine
+</div>
+
+<h2>
+Premium care without the premium hassle.
+</h2>
+
+<p>
+We combine careful detailing techniques with a convenient Dubai mobile-service experience. The goal is simple: a cleaner car, better finish and an easy booking process.
+</p>
+
+
+<div class="points">
+
+<div class="point">
+<b>01 — Careful Work</b>
+Attention to the details that matter.
+</div>
+
+<div class="point">
+<b>02 — Convenient</b>
+We come to your preferred location.
+</div>
+
+<div class="point">
+<b>03 — Premium Finish</b>
+Clean, glossy and presentation-ready.
+</div>
+
+<div class="point">
+<b>04 — Easy Booking</b>
+Message us and choose your package.
+</div>
+
+</div>
+
+<a class="btn gold" href="#contact">
+Get a Quote
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="gallery">
+
+<div class="wrap">
+
+<div class="head">
+
+<div>
+
+<div class="kicker">
+The Finish
+</div>
+
+<h2>
+Clean. Glossy. Sharp.
+</h2>
+
+</div>
+
+<p>
+Replace these portfolio panels with your real before/after photos when you have them.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="photo">
+Premium Exterior Detail
+</div>
+
+<div class="photo">
+Interior Deep Clean
+</div>
+
+<div class="photo">
+Paint Gloss Enhancement
+</div>
+
+<div class="photo">
+Wheel & Tyre Detail
+</div>
+
+<div class="photo">
+Luxury Finish
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="faq">
+
+<div class="wrap">
+
+<div class="head">
+
+<div>
+
+<div class="kicker">
+FAQ
+</div>
+
+<h2>
+Questions, answered.
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="faq">
+
+<article>
+<h3>
+Do you offer mobile detailing?
+</h3>
+<p>
+Yes. This demo is designed around a convenient mobile detailing service in Dubai.
+</p>
+</article>
+
+
+<article>
+<h3>
+How long does detailing take?
+</h3>
+<p>
+Time depends on vehicle size and package. Confirm the exact duration when booking.
+</p>
+</article>
+
+
+<article>
+<h3>
+Can I book through WhatsApp?
+</h3>
+<p>
+Yes. Replace the demo WhatsApp number with the real business number.
+</p>
+</article>
+
+
+<article>
+<h3>
+Do you work at homes and offices?
+</h3>
+<p>
+Yes, subject to location and suitable working conditions.
+</p>
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<section id="contact">
+
+<div class="wrap">
+
+<div class="cta">
+
+<div>
+
+<div class="kicker">
+Ready for the shine?
+</div>
+
+<h2>
+Let's make your car look its best.
+</h2>
+
+<p>
+Replace the demo contact details before sending this site to a client.
+</p>
+
+</div>
+
+<a class="btn gold"
+href="https://wa.me/971500000000"
+target="_blank">
+
+WhatsApp Booking
+
+</a>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+
+<a class="wa"
+href="https://wa.me/971500000000"
+target="_blank">
+WA
+</a>
+
+
+<footer>
+
+<div class="wrap foot">
+
+<div>
+© 2026 Dubai Auto Shine. All rights reserved.
+</div>
+
+<div>
+Premium mobile detailing • Dubai, UAE
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
