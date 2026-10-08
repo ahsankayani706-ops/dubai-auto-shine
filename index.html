@@ -3,428 +3,595 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Dubai Auto Shine — premium mobile car detailing in Dubai">
-<title>Dubai Auto Shine | Premium Car Detailing</title>
+
+<meta name="description"
+content="GKS LUXE PREMIUM CAR WASH AND DETAILING — premium car wash and detailing in Dubai.">
+
+<title>GKS LUXE | Premium Car Wash & Detailing Dubai</title>
 
 <style>
 :root{
---bg:#070707;
---card:#111;
---gold:#d8ad52;
---text:#f6f2e9;
---muted:#aaa59b;
---line:#252525;
---max:1180px
+  --bg:#070707;
+  --card:#111;
+  --gold:#d8ad52;
+  --gold-light:#f1d38a;
+  --text:#f6f2e9;
+  --muted:#aaa59b;
+  --line:#252525;
+  --max:1180px;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-background:var(--bg);
-color:var(--text);
-font:15px/1.6 Arial,sans-serif
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:15px/1.6 Arial,sans-serif;
 }
 
-a{color:inherit;text-decoration:none}
-.wrap{width:min(92%,var(--max));margin:auto}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  width:min(92%,var(--max));
+  margin:auto;
+}
+
+/* HEADER */
 
 header{
-position:fixed;
-z-index:9;
-top:0;
-width:100%;
-background:#070707dd;
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--line)
+  position:fixed;
+  z-index:100;
+  top:0;
+  width:100%;
+  background:#070707dd;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-font-weight:900;
-letter-spacing:1.5px
+  font-weight:900;
+  letter-spacing:1.5px;
+  font-size:18px;
 }
 
 .logo i{
-color:var(--gold);
-font-style:normal
+  color:var(--gold);
+  font-style:normal;
 }
 
 nav{
-display:flex;
-gap:25px
+  display:flex;
+  gap:25px;
 }
 
 nav a{
-color:#ccc;
-font-size:13px
+  color:#ccc;
+  font-size:13px;
 }
 
-nav a:hover{color:var(--gold)}
+nav a:hover{
+  color:var(--gold);
+}
+
+/* BUTTONS */
 
 .btn{
-display:inline-block;
-padding:13px 20px;
-border-radius:4px;
-font-weight:800;
-font-size:13px
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:4px;
+  font-weight:800;
+  font-size:13px;
+  transition:.2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .gold{
-background:var(--gold);
-color:#090909
+  background:var(--gold);
+  color:#090909;
 }
 
 .outline{
-border:1px solid #8e7036;
-color:var(--gold)
+  border:1px solid #8e7036;
+  color:var(--gold);
 }
+
+/* HERO */
 
 .hero{
-min-height:100vh;
-padding-top:76px;
-display:flex;
-align-items:center;
-background:
-radial-gradient(circle at 80% 45%,#6d531b33,transparent 32%),
-linear-gradient(110deg,#050505 25%,#151515 100%)
+  min-height:100vh;
+  padding-top:76px;
+  display:flex;
+  align-items:center;
+
+  background:
+  radial-gradient(
+    circle at 80% 45%,
+    #6d531b33,
+    transparent 32%
+  ),
+  linear-gradient(
+    110deg,
+    #050505 25%,
+    #151515 100%
+  );
 }
 
-.hero-in{max-width:720px}
+.hero-in{
+  max-width:800px;
+}
 
-.eyebrow,.kicker{
-color:var(--gold);
-font-size:11px;
-font-weight:900;
-letter-spacing:3px;
-text-transform:uppercase
+.eyebrow,
+.kicker{
+  color:var(--gold);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
 .hero h1{
-font-size:clamp(46px,7vw,82px);
-line-height:.98;
-letter-spacing:-3px;
-margin:15px 0 22px
+  font-size:clamp(43px,6.5vw,78px);
+  line-height:.98;
+  letter-spacing:-3px;
+  margin:15px 0 22px;
 }
 
-.hero h1 span,h2 span{color:var(--gold)}
+.hero h1 span,
+h2 span{
+  color:var(--gold);
+}
 
 .hero p{
-font-size:18px;
-color:#c3bfb7;
-max-width:610px
+  font-size:18px;
+  color:#c3bfb7;
+  max-width:650px;
 }
 
 .actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin:28px 0
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:28px 0;
 }
 
 .stats{
-display:flex;
-gap:40px;
-margin-top:45px
+  display:flex;
+  gap:40px;
+  margin-top:45px;
 }
 
 .stats b{
-font-size:27px;
-display:block
+  font-size:27px;
+  display:block;
 }
 
-.stats small{color:var(--muted)}
+.stats small{
+  color:var(--muted);
+}
 
-section{padding:100px 0}
+/* GENERAL SECTIONS */
+
+section{
+  padding:100px 0;
+}
 
 .head{
-display:flex;
-justify-content:space-between;
-gap:30px;
-align-items:end;
-margin-bottom:42px
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:42px;
 }
 
 .head h2{
-font-size:clamp(32px,4vw,50px);
-line-height:1;
-margin:8px 0 0
+  font-size:clamp(32px,4vw,50px);
+  line-height:1;
+  margin:8px 0 0;
 }
 
 .head p{
-max-width:480px;
-color:var(--muted)
+  max-width:480px;
+  color:var(--muted);
 }
 
+/* CARDS */
+
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
 .card{
-background:linear-gradient(145deg,#151515,#0c0c0c);
-border:1px solid var(--line);
-border-radius:10px;
-padding:28px
+  background:
+  linear-gradient(
+    145deg,
+    #151515,
+    #0c0c0c
+  );
+
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:28px;
 }
 
 .icon{
-font-size:28px;
-color:var(--gold)
+  font-size:28px;
+  color:var(--gold);
 }
 
 .card h3{
-margin:12px 0 7px;
-font-size:20px
+  margin:12px 0 7px;
+  font-size:20px;
 }
 
-.card p,.card li{color:var(--muted)}
+.card p,
+.card li{
+  color:var(--muted);
+}
 
-.packages{background:#0c0c0c}
+/* SERVICES */
+
+.service-card{
+  min-height:235px;
+}
+
+/* PACKAGES */
+
+.packages{
+  background:#0c0c0c;
+}
 
 .price{
-font-size:29px;
-color:var(--gold);
-font-weight:900;
-margin:15px 0
+  font-size:23px;
+  color:var(--gold);
+  font-weight:900;
+  margin:15px 0;
 }
 
 .card ul{
-padding:0;
-list-style:none
+  padding:0;
+  list-style:none;
 }
 
 .card li{
-padding:7px 0;
-border-bottom:1px solid var(--line);
-font-size:13px
+  padding:7px 0;
+  border-bottom:1px solid var(--line);
+  font-size:13px;
 }
 
 .card li:before{
-content:'✓';
-color:var(--gold);
-margin-right:8px
+  content:'✓';
+  color:var(--gold);
+  margin-right:8px;
 }
 
 .featured{
-border-color:#9a783b;
-transform:translateY(-7px);
-position:relative
+  border-color:#9a783b;
+  transform:translateY(-7px);
+  position:relative;
 }
 
 .badge{
-position:absolute;
-right:15px;
-top:15px;
-background:var(--gold);
-color:#111;
-font-size:9px;
-font-weight:900;
-padding:4px 7px
+  position:absolute;
+  right:15px;
+  top:15px;
+  background:var(--gold);
+  color:#111;
+  font-size:9px;
+  font-weight:900;
+  padding:4px 7px;
 }
 
+/* WHY US */
+
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:center
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
 }
 
 .visual{
-height:420px;
-border:1px solid var(--line);
-border-radius:12px;
-background:
-radial-gradient(circle at 70% 30%,#3a3a3a,#0b0b0b 60%);
-display:flex;
-align-items:end;
-padding:30px
+  height:420px;
+
+  border:1px solid var(--line);
+  border-radius:12px;
+
+  background:
+  radial-gradient(
+    circle at 70% 30%,
+    #3a3a3a,
+    #0b0b0b 60%
+  );
+
+  display:flex;
+  align-items:end;
+  padding:30px;
 }
 
 .visual strong{
-font-size:70px;
-line-height:.85;
-color:#d8ad52cc
+  font-size:62px;
+  line-height:.85;
+  color:#d8ad52cc;
 }
 
-.copy p{color:var(--muted)}
+.copy p{
+  color:var(--muted);
+}
 
 .points{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin:25px 0
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:25px 0;
 }
 
 .point{
-border:1px solid var(--line);
-padding:15px;
-border-radius:7px;
-color:var(--muted);
-font-size:13px
+  border:1px solid var(--line);
+  padding:15px;
+  border-radius:7px;
+  color:var(--muted);
+  font-size:13px;
 }
 
 .point b{
-display:block;
-color:var(--gold);
-margin-bottom:3px
+  display:block;
+  color:var(--gold);
+  margin-bottom:3px;
 }
 
+/* GALLERY */
+
 .gallery{
-display:grid;
-grid-template-columns:1.4fr 1fr 1fr;
-grid-template-rows:210px 210px;
-gap:12px
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  grid-template-rows:210px 210px;
+  gap:12px;
 }
 
 .photo{
-border-radius:9px;
-border:1px solid var(--line);
-padding:20px;
-display:flex;
-align-items:end;
-background:
-linear-gradient(135deg,#5b461b55,transparent 45%),
-linear-gradient(145deg,#292929,#0d0d0d)
+  border-radius:9px;
+  border:1px solid var(--line);
+  padding:20px;
+
+  display:flex;
+  align-items:end;
+
+  background:
+  linear-gradient(
+    135deg,
+    #5b461b55,
+    transparent 45%
+  ),
+  linear-gradient(
+    145deg,
+    #292929,
+    #0d0d0d
+  );
 }
 
-.photo:first-child{grid-row:span 2}
+.photo:first-child{
+  grid-row:span 2;
+}
+
+/* FAQ */
 
 .faq{
-max-width:850px;
-margin:auto
+  max-width:850px;
+  margin:auto;
 }
 
 .faq article{
-border-bottom:1px solid var(--line);
-padding:19px 0
+  border-bottom:1px solid var(--line);
+  padding:19px 0;
 }
 
 .faq h3{
-font-size:15px;
-margin:0
+  font-size:15px;
+  margin:0;
 }
 
 .faq p{
-color:var(--muted);
-font-size:14px;
-margin:7px 0 0
+  color:var(--muted);
+  font-size:14px;
+  margin:7px 0 0;
 }
 
+/* CONTACT */
+
 .cta{
-border:1px solid #70582e;
-background:linear-gradient(110deg,#171208,#0d0d0d);
-padding:48px;
-border-radius:13px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:25px
+  border:1px solid #70582e;
+
+  background:
+  linear-gradient(
+    110deg,
+    #171208,
+    #0d0d0d
+  );
+
+  padding:48px;
+  border-radius:13px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
 }
 
 .cta h2{
-font-size:clamp(30px,4vw,47px);
-margin:5px 0
+  font-size:clamp(30px,4vw,47px);
+  margin:5px 0;
 }
 
-.cta p{color:var(--muted)}
+.cta p{
+  color:var(--muted);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:25px;
+}
+
+.contact-card{
+  background:#0d0d0d;
+  border:1px solid var(--line);
+  padding:22px;
+  border-radius:9px;
+}
+
+.contact-card b{
+  color:var(--gold);
+  display:block;
+  margin-bottom:4px;
+}
+
+/* FOOTER */
 
 footer{
-border-top:1px solid var(--line);
-padding:30px 0;
-color:#888;
-font-size:12px
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:#888;
+  font-size:12px;
 }
 
 .foot{
-display:flex;
-justify-content:space-between
+  display:flex;
+  justify-content:space-between;
 }
 
+/* WHATSAPP FLOATING BUTTON */
+
 .wa{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25d366;
-color:#07150b;
-width:56px;
-height:56px;
-border-radius:50%;
-display:grid;
-place-items:center;
-font-weight:900;
-z-index:20
+  position:fixed;
+  right:20px;
+  bottom:20px;
+
+  background:#25d366;
+  color:#07150b;
+
+  width:56px;
+  height:56px;
+
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  font-weight:900;
+
+  z-index:200;
+
+  box-shadow:0 8px 25px #0008;
 }
+
+/* MOBILE */
 
 @media(max-width:850px){
 
-nav{display:none}
+  nav{
+    display:none;
+  }
 
-.grid{
-grid-template-columns:1fr
-}
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-.featured{transform:none}
+  .featured{
+    transform:none;
+  }
 
-.about{
-grid-template-columns:1fr
-}
+  .about{
+    grid-template-columns:1fr;
+  }
 
-.gallery{
-grid-template-columns:1fr 1fr;
-grid-template-rows:180px 180px 180px
-}
+  .gallery{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:180px 180px 180px;
+  }
 
-.photo:first-child{grid-row:auto}
+  .photo:first-child{
+    grid-row:auto;
+  }
 
-.cta{display:block}
+  .cta{
+    display:block;
+  }
 
-.cta .btn{margin-top:15px}
+  .cta .btn{
+    margin-top:15px;
+  }
 
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 @media(max-width:520px){
 
-section{padding:75px 0}
+  section{
+    padding:75px 0;
+  }
 
-.stats{
-gap:18px;
-flex-wrap:wrap
-}
+  .stats{
+    gap:18px;
+    flex-wrap:wrap;
+  }
 
-.points{
-grid-template-columns:1fr
-}
+  .points{
+    grid-template-columns:1fr;
+  }
 
-.gallery{
-grid-template-columns:1fr
-}
+  .gallery{
+    grid-template-columns:1fr;
+  }
 
-.foot{display:block}
+  .foot{
+    display:block;
+  }
 
-.foot div+div{
-margin-top:8px
-}
+  .foot div+div{
+    margin-top:8px;
+  }
 
+  .visual strong{
+    font-size:48px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <div class="wrap nav">
 
 <a class="logo" href="#">
-DUBAI <i>AUTO SHINE</i>
+GKS <i>LUXE</i>
 </a>
 
 <nav>
@@ -436,10 +603,15 @@ DUBAI <i>AUTO SHINE</i>
 <a href="#contact">Contact</a>
 </nav>
 
-<a class="btn gold" href="#contact">Book Now</a>
+<a class="btn gold" href="#contact">
+Book Now
+</a>
 
 </div>
 </header>
+
+
+<!-- HERO -->
 
 <main>
 
@@ -448,25 +620,30 @@ DUBAI <i>AUTO SHINE</i>
 <div class="wrap hero-in">
 
 <div class="eyebrow">
-Premium Car Detailing • Dubai
+Premium Car Wash & Detailing • Dubai
 </div>
 
 <h1>
-Make Your Car<br>
-<span>Shine Like New.</span>
+Luxury Care.<br>
+<span>Exceptional Finish.</span>
 </h1>
 
 <p>
-Professional detailing, deep cleaning and paint care for drivers who expect their car to look exceptional.
+Premium car wash and detailing for drivers who expect
+a cleaner cabin, sharper finish and a higher standard
+of vehicle care.
 </p>
 
 <div class="actions">
 
-<a class="btn gold" href="#packages">
-View Packages
+<a class="btn gold" href="#services">
+Explore Services
 </a>
 
-<a class="btn outline" href="#contact">
+<a
+class="btn outline"
+href="https://wa.me/971503309452"
+target="_blank">
 WhatsApp Us
 </a>
 
@@ -475,25 +652,28 @@ WhatsApp Us
 <div class="stats">
 
 <div>
-<b>500+</b>
-<small>Cars detailed</small>
-</div>
-
-<div>
-<b>4.9/5</b>
+<b>5.0★</b>
 <small>Customer rating</small>
 </div>
 
 <div>
+<b>15+</b>
+<small>Reviews</small>
+</div>
+
+<div>
 <b>Dubai</b>
-<small>Mobile service</small>
+<small>United Arab Emirates</small>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
+
+<!-- SERVICES -->
 
 <section id="services">
 
@@ -503,16 +683,19 @@ WhatsApp Us
 
 <div>
 
-<div class="kicker">Our Services</div>
+<div class="kicker">
+Our Services
+</div>
 
 <h2>
-Detailing done properly.
+Care for every detail.
 </h2>
 
 </div>
 
 <p>
-From a quick refresh to a complete transformation, every service is designed around a clean, premium finish.
+From a clean daily refresh to a complete detailing
+experience, choose the service your vehicle needs.
 </p>
 
 </div>
@@ -520,58 +703,109 @@ From a quick refresh to a complete transformation, every service is designed aro
 
 <div class="grid">
 
-<div class="card">
+<div class="card service-card">
+
 <div class="icon">✦</div>
-<h3>Exterior Detailing</h3>
+
+<h3>
+Premium Car Wash
+</h3>
+
 <p>
-Safe wash, decontamination, wheels, tyres and finishing for a deep showroom-style shine.
+Professional exterior care focused on a clean finish
+and a presentation-ready vehicle.
 </p>
+
 </div>
 
-<div class="card">
+
+<div class="card service-card">
+
 <div class="icon">◈</div>
-<h3>Interior Deep Clean</h3>
+
+<h3>
+Interior Cleaning
+</h3>
+
 <p>
-Seats, carpets, dashboard, panels and hard-to-reach areas professionally cleaned.
+Detailed cleaning of seats, carpets, dashboard,
+panels and everyday touch points.
 </p>
+
 </div>
 
-<div class="card">
+
+<div class="card service-card">
+
 <div class="icon">◇</div>
-<h3>Paint Enhancement</h3>
+
+<h3>
+Exterior Detailing
+</h3>
+
 <p>
-Machine polishing and gloss enhancement to restore clarity and improve paint appearance.
+Detailed attention to the bodywork, wheels,
+tyres and visible exterior surfaces.
 </p>
+
 </div>
 
-<div class="card">
+
+<div class="card service-card">
+
 <div class="icon">◆</div>
-<h3>Ceramic Protection</h3>
+
+<h3>
+Paint Care
+</h3>
+
 <p>
-Long-lasting protection with a slick finish that helps keep your vehicle easier to maintain.
+Professional care designed to improve gloss
+and keep your vehicle looking its best.
 </p>
+
 </div>
 
-<div class="card">
+
+<div class="card service-card">
+
 <div class="icon">◎</div>
-<h3>Headlight Restoration</h3>
+
+<h3>
+Deep Cleaning
+</h3>
+
 <p>
-Improve the look of faded headlights with professional cleaning and polishing.
+A more thorough clean for vehicles that need
+extra attention inside and out.
 </p>
+
 </div>
 
-<div class="card">
+
+<div class="card service-card">
+
 <div class="icon">▣</div>
-<h3>Mobile Detailing</h3>
+
+<h3>
+Luxury Vehicle Care
+</h3>
+
 <p>
-Convenient detailing at your home, office or preferred Dubai location.
+A premium-focused approach for customers who
+want their vehicle maintained to a higher standard.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- PACKAGES -->
 
 <section class="packages" id="packages">
 
@@ -581,16 +815,19 @@ Convenient detailing at your home, office or preferred Dubai location.
 
 <div>
 
-<div class="kicker">Simple Pricing</div>
+<div class="kicker">
+Services
+</div>
 
 <h2>
-Choose your shine.
+Choose your level of care.
 </h2>
 
 </div>
 
 <p>
-Clear packages for everyday maintenance, deep cleaning and premium protection.
+Contact GKS LUXE for current availability,
+vehicle-specific recommendations and pricing.
 </p>
 
 </div>
@@ -600,19 +837,39 @@ Clear packages for everyday maintenance, deep cleaning and premium protection.
 
 <div class="card">
 
-<h3>Essential</h3>
+<h3>
+Essential Care
+</h3>
 
-<div class="price">AED 149</div>
+<div class="price">
+Request a Quote
+</div>
 
 <ul>
-<li>Exterior hand wash</li>
-<li>Wheel & tyre clean</li>
-<li>Interior vacuum</li>
-<li>Dashboard wipe</li>
+
+<li>
+Premium car wash
+</li>
+
+<li>
+Exterior refresh
+</li>
+
+<li>
+Wheels & tyres
+</li>
+
+<li>
+Final presentation check
+</li>
+
 </ul>
 
-<a class="btn outline" href="#contact">
-Book Essential
+<a
+class="btn outline"
+href="https://wa.me/971503309452"
+target="_blank">
+Request Quote
 </a>
 
 </div>
@@ -621,23 +878,46 @@ Book Essential
 <div class="card featured">
 
 <span class="badge">
-MOST POPULAR
+POPULAR
 </span>
 
-<h3>Premium</h3>
+<h3>
+Premium Detail
+</h3>
 
-<div class="price">AED 299</div>
+<div class="price">
+Request a Quote
+</div>
 
 <ul>
-<li>Everything in Essential</li>
-<li>Interior deep clean</li>
-<li>Leather conditioning</li>
-<li>Paint decontamination</li>
-<li>Premium finish</li>
+
+<li>
+Exterior detailing
+</li>
+
+<li>
+Interior cleaning
+</li>
+
+<li>
+Detailed finishing
+</li>
+
+<li>
+Vehicle-specific care
+</li>
+
+<li>
+Premium presentation
+</li>
+
 </ul>
 
-<a class="btn gold" href="#contact">
-Book Premium
+<a
+class="btn gold"
+href="https://wa.me/971503309452"
+target="_blank">
+Book on WhatsApp
 </a>
 
 </div>
@@ -645,89 +925,152 @@ Book Premium
 
 <div class="card">
 
-<h3>Ultimate</h3>
+<h3>
+Luxury Detail
+</h3>
 
-<div class="price">AED 499</div>
+<div class="price">
+Request a Quote
+</div>
 
 <ul>
-<li>Everything in Premium</li>
-<li>Paint enhancement</li>
-<li>Engine bay detail</li>
-<li>Headlight polish</li>
-<li>Protection treatment</li>
+
+<li>
+Comprehensive detailing
+</li>
+
+<li>
+Interior deep clean
+</li>
+
+<li>
+Exterior detail
+</li>
+
+<li>
+Paint care
+</li>
+
+<li>
+Premium finishing
+</li>
+
 </ul>
 
-<a class="btn outline" href="#contact">
-Book Ultimate
+<a
+class="btn outline"
+href="https://wa.me/971503309452"
+target="_blank">
+Request Quote
 </a>
 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+<!-- WHY US -->
 
 <section id="why">
 
 <div class="wrap about">
 
 <div class="visual">
+
 <strong>
-01<br>
-SHINE
+GKS<br>
+LUXE
 </strong>
+
 </div>
 
 
 <div class="copy">
 
 <div class="kicker">
-Why Dubai Auto Shine
+Why GKS LUXE
 </div>
 
 <h2>
-Premium care without the premium hassle.
+A sharper standard of car care.
 </h2>
 
 <p>
-We combine careful detailing techniques with a convenient Dubai mobile-service experience. The goal is simple: a cleaner car, better finish and an easy booking process.
+GKS LUXE is positioned for customers who want more
+than a basic wash — a premium experience with attention
+to the details that make a vehicle look and feel its best.
 </p>
 
 
 <div class="points">
 
 <div class="point">
-<b>01 — Careful Work</b>
-Attention to the details that matter.
+
+<b>
+01 — Premium Care
+</b>
+
+Attention to the finish and the details.
+
 </div>
+
 
 <div class="point">
-<b>02 — Convenient</b>
-We come to your preferred location.
+
+<b>
+02 — Dubai Based
+</b>
+
+Professional vehicle care in Dubai.
+
 </div>
+
 
 <div class="point">
-<b>03 — Premium Finish</b>
-Clean, glossy and presentation-ready.
+
+<b>
+03 — Detail Focused
+</b>
+
+Inside, outside and everywhere that matters.
+
 </div>
+
 
 <div class="point">
-<b>04 — Easy Booking</b>
-Message us and choose your package.
-</div>
+
+<b>
+04 — Easy Booking
+</b>
+
+Message the team directly on WhatsApp.
 
 </div>
 
-<a class="btn gold" href="#contact">
+</div>
+
+
+<a
+class="btn gold"
+href="https://wa.me/971503309452"
+target="_blank">
+
 Get a Quote
+
 </a>
 
 </div>
 
 </div>
+
 </section>
 
+
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -742,13 +1085,14 @@ The Finish
 </div>
 
 <h2>
-Clean. Glossy. Sharp.
+Clean. Sharp. Luxe.
 </h2>
 
 </div>
 
 <p>
-Replace these portfolio panels with your real before/after photos when you have them.
+Replace these demo panels with GKS LUXE's real
+vehicle photos when available.
 </p>
 
 </div>
@@ -757,15 +1101,15 @@ Replace these portfolio panels with your real before/after photos when you have 
 <div class="gallery">
 
 <div class="photo">
-Premium Exterior Detail
+Premium Vehicle Detail
 </div>
 
 <div class="photo">
-Interior Deep Clean
+Interior Care
 </div>
 
 <div class="photo">
-Paint Gloss Enhancement
+Exterior Finish
 </div>
 
 <div class="photo">
@@ -779,8 +1123,11 @@ Luxury Finish
 </div>
 
 </div>
+
 </section>
 
+
+<!-- FAQ -->
 
 <section id="faq">
 
@@ -806,49 +1153,69 @@ Questions, answered.
 <div class="faq">
 
 <article>
+
 <h3>
-Do you offer mobile detailing?
+How can I book GKS LUXE?
 </h3>
+
 <p>
-Yes. This demo is designed around a convenient mobile detailing service in Dubai.
+Tap any WhatsApp booking button and contact
+the GKS LUXE team directly.
 </p>
+
 </article>
 
 
 <article>
+
 <h3>
-How long does detailing take?
+Do you offer different detailing services?
 </h3>
+
 <p>
-Time depends on vehicle size and package. Confirm the exact duration when booking.
+Yes. Contact the team with your vehicle type
+and what you want cleaned or detailed so they
+can recommend the right service.
 </p>
+
 </article>
 
 
 <article>
+
 <h3>
-Can I book through WhatsApp?
+How much does a service cost?
 </h3>
+
 <p>
-Yes. Replace the demo WhatsApp number with the real business number.
+Pricing can vary by vehicle and service.
+Contact GKS LUXE for the current quote.
 </p>
+
 </article>
 
 
 <article>
+
 <h3>
-Do you work at homes and offices?
+Where are you based?
 </h3>
+
 <p>
-Yes, subject to location and suitable working conditions.
+GKS LUXE PREMIUM CAR WASH AND DETAILING
+is based in Dubai, United Arab Emirates.
 </p>
+
 </article>
 
 </div>
 
 </div>
+
 </section>
 
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -859,21 +1226,24 @@ Yes, subject to location and suitable working conditions.
 <div>
 
 <div class="kicker">
-Ready for the shine?
+Ready for the Luxe finish?
 </div>
 
 <h2>
-Let's make your car look its best.
+Book your vehicle care.
 </h2>
 
 <p>
-Replace the demo contact details before sending this site to a client.
+Contact GKS LUXE directly for availability
+and a current quote.
 </p>
 
 </div>
 
-<a class="btn gold"
-href="https://wa.me/971500000000"
+
+<a
+class="btn gold"
+href="https://wa.me/971503309452"
 target="_blank">
 
 WhatsApp Booking
@@ -882,29 +1252,63 @@ WhatsApp Booking
 
 </div>
 
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<b>
+WhatsApp / Phone
+</b>
+
++971 50 330 9452
+
 </div>
+
+
+<div class="contact-card">
+
+<b>
+Location
+</b>
+
+Dubai, United Arab Emirates
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
 
-<a class="wa"
-href="https://wa.me/971500000000"
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="wa"
+href="https://wa.me/971503309452"
 target="_blank">
+
 WA
+
 </a>
 
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="wrap foot">
 
 <div>
-© 2026 Dubai Auto Shine. All rights reserved.
+© 2026 GKS LUXE PREMIUM CAR WASH AND DETAILING.
 </div>
 
 <div>
-Premium mobile detailing • Dubai, UAE
+Premium Car Wash & Detailing • Dubai, UAE
 </div>
 
 </div>
